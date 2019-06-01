@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="large-text">
+          <h1>Frontend <br />Training</h1>
+          <h1>Meal Planner App</h1>
+        </div>
+
+        <div class="new-meal">
+          <h2>Add a new meal plan</h2>
+          <form id="add-meal">
+            <div class="row cols">
+              <div class="one">
+                <p>Meal Name</p>
+                <input id="meal-name" type="text" />
+              </div>
+              <div class="two">
+                <p>Category</p>
+                <select id="category" class="category" class="select">
+                  <option value="Breakfast" selected>Breakfast</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner" class="category">Dinner</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <p>Recipe Link</p>
+              <input type="url" name="recipe-link" id="recipe-link" />
+            </div>
+            <div class="row">
+              <p>When will you cook this meal?</p>
+              <input type="date" onload="getDate()" id="cook-when" />
+            </div>
+            <div class="row">
+              <p>Add image link</p>
+              <input type="url" name="image-link" id="image-link" />
+            </div>
+
+            <button type="submit">Create Plan</button>
+          </form>
+        </div>
+      </header>
+
+      <div class="meals">
+        <form class="search-field">
+          <input type="search" placeholder="e.g Basmati Rice" id="search" />
+          <button type="submit">Search Meal</button>
+        </form>
+        <div class="list"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
